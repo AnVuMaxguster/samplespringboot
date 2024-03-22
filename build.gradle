@@ -1,0 +1,43 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.3'
+}
+
+group = 'org.example'
+version = '0.0.1-SNAPSHOT'
+
+allprojects {
+    apply plugin: 'io.spring.dependency-management'
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+
+    bootJar {
+        enabled = false
+    }
+
+    jar {
+        enabled = true
+    }
+
+    group = 'com.example'
+    version = '0.0.1-SNAPSHOT'
+    sourceCompatibility = '17'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-web'
+        implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+        implementation 'com.google.code.gson:gson:2.10.1'
+
+        testImplementation platform('org.junit:junit-bom:5.9.1')
+        testImplementation 'org.junit.jupiter:junit-jupiter'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}

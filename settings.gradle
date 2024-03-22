@@ -1,0 +1,5 @@
+rootProject.name = 'testgradle'
+include 'web'
+include 'add'
+include 'studentlist'
+
