@@ -14,19 +14,19 @@ public class AddServiceTest {
     void singleValueTest(){
         assertEquals(4, addService.result(2, 2));
     }
-//    ////    ---------------------------------------------------------------------------------------
-//    @ParameterizedTest
-//    @ValueSource(ints = {1,2,3,4})
-//    void multipleValueTest(int a){
-//        assertEquals(a, addService.result(1, 2));
-//    }
-//
-//    @ParameterizedTest
-//    @ValueSource(strings = { "cali", "bali", "dani" })
-//    void endsWithI(String str) {
-//        assertTrue(str.endsWith("i"));
-//    }
-//    ////    ---------------------------------------------------------------------------------------
+    ////    ---------------------------------------------------------------------------------------
+    @ParameterizedTest
+    @ValueSource(ints = {1,2,3,4})
+    void multipleValueTest(int a){
+        assertEquals(a, addService.result(1, 2));
+    }
+
+    @ParameterizedTest
+    @ValueSource(strings = { "cali", "bali", "dani" })
+    void endsWithI(String str) {
+        assertTrue(str.endsWith("i"));
+    }
+    ////    ---------------------------------------------------------------------------------------
 //
 //    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
 //    @DisplayName("RepeatingTest")
