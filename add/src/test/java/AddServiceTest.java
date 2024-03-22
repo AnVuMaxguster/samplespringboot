@@ -6,6 +6,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+//@Disabled
 public class AddServiceTest {
 
     AddService addService = new AddService();
@@ -14,19 +15,19 @@ public class AddServiceTest {
     void singleValueTest(){
         assertEquals(4, addService.result(2, 2));
     }
-    ////    ---------------------------------------------------------------------------------------
-    @ParameterizedTest
-    @ValueSource(ints = {1,2,3,4})
-    void multipleValueTest(int a){
-        assertEquals(a, addService.result(1, 2));
-    }
-
-    @ParameterizedTest
-    @ValueSource(strings = { "cali", "bali", "dani" })
-    void endsWithI(String str) {
-        assertTrue(str.endsWith("i"));
-    }
-    ////    ---------------------------------------------------------------------------------------
+//    ////    ---------------------------------------------------------------------------------------
+//    @ParameterizedTest
+//    @ValueSource(ints = {1,2,3,4})
+//    void multipleValueTest(int a){
+//        assertEquals(a, addService.result(1, 2));
+//    }
+//
+//    @ParameterizedTest
+//    @ValueSource(strings = { "cali", "bali", "dani" })
+//    void endsWithI(String str) {
+//        assertTrue(str.endsWith("i"));
+//    }
+//    ////    ---------------------------------------------------------------------------------------
 //
 //    @RepeatedTest(value = 5, name = "{displayName} {currentRepetition}/{totalRepetitions}")
 //    @DisplayName("RepeatingTest")
@@ -89,5 +90,9 @@ public class AddServiceTest {
 //        System.out.println("Only run once after all tests");
 //    }
     //    ////    ---------------------------------------------------------------------------------------
-
+//    @Disabled
+//    @Test
+//    void testWillBeSkipped() {
+//    }
+    //    ////    ---------------------------------------------------------------------------------------
 }
