@@ -8,5 +8,5 @@ RUN apt install -y git
 RUN git clone https://github.com/AnVuMaxguster/samplespringboot.git .
 RUN chmod a+x gradlew
 
-# Unit test
-CMD ["./gradlew", "test", "--info"]
+# Unit & Coverage test
+CMD ["/bin/sh", "-c", "./gradlew test jacocoTestReport --info"]

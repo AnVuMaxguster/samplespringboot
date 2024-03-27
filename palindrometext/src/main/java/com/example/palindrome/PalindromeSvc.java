@@ -2,7 +2,7 @@ package com.example.palindrome;
 
 public class PalindromeSvc {
     public boolean isPalindrome(String inputString) {
-        if (inputString.isEmpty()) {
+        if (inputString.isEmpty() || inputString.length() == 1) {
             return true;
         } else {
             char firstChar = inputString.charAt(0);
