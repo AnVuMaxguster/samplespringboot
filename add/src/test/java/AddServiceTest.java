@@ -11,7 +11,7 @@ public class AddServiceTest {
 
     @Test
     void singleValueTest(){
-        assertEquals(4, addService.result(2, 2));
+        assertEquals(4, addService.result(2, 3));
     }
 //    ////    ---------------------------------------------------------------------------------------
 //    @ParameterizedTest
