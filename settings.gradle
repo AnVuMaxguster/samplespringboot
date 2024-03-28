@@ -1,4 +1,4 @@
-rootProject.name = 'testgradle'
+rootProject.name = 'sample_spring'
 include 'web'
 include 'add'
 include 'studentlist'

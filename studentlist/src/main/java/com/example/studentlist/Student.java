@@ -1,5 +1,6 @@
 package com.example.studentlist;
 
+import com.google.gson.Gson;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
